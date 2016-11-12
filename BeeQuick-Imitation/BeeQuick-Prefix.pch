@@ -1,0 +1,41 @@
+//
+//  BeeQuick-Prefix.pch
+//  BeeQuick-Imitation
+//
+//  Created by Phoenix on 11/12/16.
+//  Copyright © 2016 Phoenix. All rights reserved.
+//
+
+#ifndef BeeQuick_Prefix_pch
+#define BeeQuick_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* BeeQuick_Prefix_pch */
+
+
+//C & OC hybrid compile needs
+#ifdef __OBJC__
+
+//common macro
+#define kSCREEN [UIScreen mainScreen].bounds
+#define kSCREEN_W [UIScreen mainScreen].bounds.size.width
+#define kSCREEN_H [UIScreen mainScreen].bounds.size.height
+
+
+//common class
+#import "Masonry.h"
+#import "HOCustom.h"
+
+
+/**
+ *  DEBUG
+ */
+#ifdef DEBUG // 测试!
+#define NSLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define NSLog(...) // 打印信息也是非常耗性能!
+#endif
+
+#endif
