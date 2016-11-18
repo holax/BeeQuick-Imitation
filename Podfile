@@ -4,5 +4,6 @@ platform :ios, '9.0'
 target 'BeeQuick-Imitation' do
   pod 'AFNetworking'
   pod 'SDWebImage'
+  pod 'Masonry'
 end
 
